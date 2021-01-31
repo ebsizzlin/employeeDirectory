@@ -2,7 +2,7 @@
 import React from "react";
 
 //employeecard func
-function EmployeeCard(props) {
+function employeeCard(props) {
     return (
         <tr>
             <th scope="row"><img alt={props.firstName} src={props.picture} /></th>
@@ -15,3 +15,4 @@ function EmployeeCard(props) {
 }
 
 //export
+export default employeeCard;
