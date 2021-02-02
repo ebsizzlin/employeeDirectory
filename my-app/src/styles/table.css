@@ -1,7 +1,16 @@
 .table-responsive {
-  height: 400px;
+  /* height: 400px; */
   width: 100%;
   overflow: scroll;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 thead tr:nth-child(1) th {

@@ -1,7 +1,15 @@
 .form-group {
-  padding-left: 50px;
+  /* padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 10px;
+  padding-top: 10px; */
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  vertical-align: middle;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btn-primary {
