@@ -121,10 +121,10 @@ class Table extends React.Component {
     //sort by dob
     sortByDOB = () => {
         const sortedEmployees = this.state.results.sort((a, b) => {
-          if (b.DOB > a.DOB) {
+          if (b.dob.date > a.dob.date) {
             return -1
           }
-          if (a.DOB > b.DOB) {
+          if (a.dob.date > b.dob.date) {
             return 1
           }
           return 0;

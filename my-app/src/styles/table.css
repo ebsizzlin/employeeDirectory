@@ -1,16 +1,7 @@
 .table-responsive {
-  /* height: 400px; */
+  height: 400px;
   width: 100%;
   overflow: scroll;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  vertical-align: middle;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 thead tr:nth-child(1) th {
@@ -28,7 +19,7 @@ thead tr:nth-child(1) th {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   cursor: pointer; /* Pointer/hand icon */
-  border-top: 10px solid #2cbbd8;
+  border-top: 10px solid #6bb6bc;
   margin-top: 50px;
   position: relative;
   top: 16px;
