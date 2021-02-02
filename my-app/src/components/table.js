@@ -136,4 +136,5 @@ class Table extends React.Component {
 }
 
 
-{/* //export */}
+//export
+export default Table;
