@@ -3,7 +3,7 @@ import React from "react";
 //import utils api
 import API from "../utils/api.js"
 //import search
-import Search from "../components/searchBar"
+import Search from "./searchBar"
 //import styles
 import "../styles/table.css"
 
@@ -78,6 +78,66 @@ class Table extends React.Component {
         this.setState({ results: sortedEmployees })
     }
 
+    //sort by phone
+    sortByPhone = () => {
+        const sortedEmployees = this.state.results.sort((a, b) => {
+          if (b.phone > a.phone) {
+            return -1
+          }
+          if (a.phone > b.phone) {
+            return 1
+          }
+          return 0;
+        });
+        if (this.state.sortOrder === "DESC") {
+          sortedEmployees.reverse();
+          this.setState({ sortOrder: "ASC" });
+        } else {
+          this.setState({ sortOrder: "DESC" });
+        }
+        this.setState({ results: sortedEmployees })
+    }
+
+    //sort by email
+    sortByEmail = () => {
+        const sortedEmployees = this.state.results.sort((a, b) => {
+          if (b.email > a.email) {
+            return -1
+          }
+          if (a.email > b.email) {
+            return 1
+          }
+          return 0;
+        });
+        if (this.state.sortOrder === "DESC") {
+          sortedEmployees.reverse();
+          this.setState({ sortOrder: "ASC" });
+        } else {
+          this.setState({ sortOrder: "DESC" });
+        }
+        this.setState({ results: sortedEmployees })
+    }
+
+    //sort by dob
+    sortByDOB = () => {
+        const sortedEmployees = this.state.results.sort((a, b) => {
+          if (b.DOB > a.DOB) {
+            return -1
+          }
+          if (a.DOB > b.DOB) {
+            return 1
+          }
+          return 0;
+        });
+        if (this.state.sortOrder === "DESC") {
+          sortedEmployees.reverse();
+          this.setState({ sortOrder: "ASC" });
+        } else {
+          this.setState({ sortOrder: "DESC" });
+        }
+        this.setState({ results: sortedEmployees })
+    }
+
     //render JSX func
     render() {
         return (
@@ -92,9 +152,9 @@ class Table extends React.Component {
                     <th>Image</th>
                     <th>First Name <span className="downArrow" onClick={this.sortByFName}></span></th>
                     <th>Last Name <span className="downArrow" onClick={this.sortByLName}></span></th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>DOB </th>
+                    <th>Phone <span className="downArrow" onClick={this.sortByPhone}></span></th>
+                    <th>Email <span className="downArrow" onClick={this.sortByEmail}></span></th>
+                    <th>DOB <span className="downArrow" onClick={this.sortByDOB}></span></th>
                   </tr>
                 </thead>
 

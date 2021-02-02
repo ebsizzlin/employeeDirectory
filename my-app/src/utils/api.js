@@ -1,10 +1,12 @@
 import axios from "axios";
 const url = 'https://randomuser.me/api/?results=30';
 
-//api call
-export default {
-    ApiSearch: function () {
-        return axios.get(url)
-
-    }
+function ApiSearch() {
+    return axios.get(url)
 }
+const myObject = {
+    ApiSearch: ApiSearch
+}
+
+//api call
+export default myObject
