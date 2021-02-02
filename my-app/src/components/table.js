@@ -27,12 +27,20 @@ class Table extends React.Component {
         }).catch(err => console.log(err))
     }
 
-//handle input searchbar
+    //handle input searchbar
+    handleInputChange = event => {
+        if (event.target.name === "search") {
+          const searchTerm = event.target.value.toLowerCase();
+          this.setState({
+            search: searchTerm
+          })
+        }
+    }
 
-//sort by first
+    //sort by first
 
-//sort by last
+    //sort by last
 
-//render JSX func
+    //render JSX func
 
 //export
