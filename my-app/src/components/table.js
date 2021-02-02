@@ -98,4 +98,7 @@ class Table extends React.Component {
                   </tr>
                 </thead>
 
-//export
+                {/* first name */}
+                {/* last name */}
+
+{/* //export */}
