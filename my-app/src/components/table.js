@@ -79,5 +79,23 @@ class Table extends React.Component {
     }
 
     //render JSX func
+    render() {
+        return (
+          <div>
+            <Search handleInputChange={this.handleInputChange}
+              search={this.state.search} />
+    
+            <div className="table-responsive">
+            <table className="table table-striped table-resposive text-center table-hover">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>First Name <span className="downArrow" onClick={this.sortByFName}></span></th>
+                    <th>Last Name <span className="downArrow" onClick={this.sortByLName}></span></th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>DOB </th>
+                  </tr>
+                </thead>
 
 //export
