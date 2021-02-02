@@ -59,6 +59,24 @@ class Table extends React.Component {
     }    
 
     //sort by last
+    sortByLName = () => {
+        const sortedEmployees = this.state.results.sort((a, b) => {
+          if (b.name.last > a.name.last) {
+            return -1
+          }
+          if (a.name.last > b.name.last) {
+            return 1
+          }
+          return 0;
+        });
+        if (this.state.sortOrder === "DESC") {
+          sortedEmployees.reverse();
+          this.setState({ sortOrder: "ASC" });
+        } else {
+          this.setState({ sortOrder: "DESC" });
+        }
+        this.setState({ results: sortedEmployees })
+    }
 
     //render JSX func
 
