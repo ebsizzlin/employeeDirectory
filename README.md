@@ -6,7 +6,7 @@ A React application
 
 ## Tech Used
 
-React
+Javascript, HTML, CSS, Bootstrap, React.js
 
 ## Heroku Link
 
